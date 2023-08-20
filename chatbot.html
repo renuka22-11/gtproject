@@ -1,0 +1,275 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .chat-container {
+            width: 452px;
+            max-height: 400px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .message {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 70%;
+        }
+
+        .message.user {
+            background-color: #e0f4fd;
+            align-self: flex-end;
+        }
+
+        .message.bot {
+            background-color: #f1f7e7;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #sendButton {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #sendButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chatContainer">
+        <!-- Chat messages will be added here -->
+<!--        <div class="message user">
+            Hello, chatbot!
+        </div>
+        <br />
+        <br />
+        <div class="message bot">
+            Hi there! How can I assist you?
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="input-container">
+        <input type="text" id="userInput" placeholder="Type your message here..." &nbsp;&nbsp;&nbsp;/>
+        <button id="sendButton">Send</button>
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatContainer = document.getElementById("chatContainer");
+            const userInput = document.getElementById("userInput");
+            const sendButton = document.getElementById("sendButton");
+
+            sendButton.addEventListener("click", sendMessage);
+            userInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    sendMessage();
+                }
+            });
+
+            function appendMessage(sender, message) {
+                const messageElement = document.createElement("div");
+                messageElement.className = "message " + sender.toLowerCase();
+                messageElement.textContent = message;
+                chatContainer.appendChild(messageElement);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            function sendMessage() {
+                const userMessage = userInput.value;
+                if (userMessage.trim() === "") return;
+
+                appendMessage("user", userMessage);
+                userInput.value = "";
+
+                setTimeout(function() {
+                    const botMessage = "Thanks for your message!";
+                    appendMessage("bot", botMessage);
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>-->-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        /* Your CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 320px;
+            max-height: 500px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow-y: scroll;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+        }
+
+        .chat-message {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 70%;
+        }
+
+        .user-message {
+            background-color: #e0f4fd;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background-color: #f1f7e7;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #sendButton {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #sendButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-icon" id="chatbotIcon">Chat</div>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chat-container" id="chatContainer">
+            <!-- Chat messages will be added here -->
+            <div class="chat-message bot">Hi there! How can I assist you?</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="Text1" placeholder="Type your message here..." />
+            <button id="Button1">Send</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatbotIcon = document.getElementById("chatbotIcon");
+            const chatbotContainer = document.getElementById("chatbotContainer");
+            const chatContainer = document.getElementById("chatContainer");
+            const userInput = document.getElementById("userInput");
+            const sendButton = document.getElementById("sendButton");
+
+            chatbotIcon.addEventListener("click", function() {
+                chatbotContainer.style.display = "block";
+            });
+
+            sendButton.addEventListener("click", sendMessage);
+            userInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    sendMessage();
+                }
+            });
+
+            function appendMessage(sender, message) {
+                const messageElement = document.createElement("div");
+                messageElement.className = "chat-message " + sender.toLowerCase() + "-message";
+                messageElement.textContent = message;
+                chatContainer.appendChild(messageElement);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            function sendMessage() {
+                const userMessage = userInput.value;
+                if (userMessage.trim() === "") return;
+
+                appendMessage("user", userMessage);
+                userInput.value = "";
+
+                setTimeout(function() {
+                    const botMessage = "Thanks for your message!";
+                    appendMessage("bot", botMessage);
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
