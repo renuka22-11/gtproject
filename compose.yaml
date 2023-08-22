@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   main:
-    image: main_image
+    image: smaranm/main_image
     container_name: main_container
     networks:
       static_net:
@@ -13,28 +13,28 @@ services:
       - contact_us
 
   courses:
-    image: courses_image
+    image: smaranm/courses_image
     container_name: courses_container
     networks:
       static_net:
         ipv4_address: 192.168.1.3
 
   staff:
-    image: staff_image
+    image: smaranm/staff_image
     container_name: staff_container
     networks:
       static_net:
         ipv4_address: 192.168.1.4
 
   gallery:
-    image: gallery_image
+    image: smaranm/gallery_image
     container_name: gallery_container
     networks:
       static_net:
         ipv4_address: 192.168.1.5
 
   contact_us:
-    image: contact-us_image
+    image: smaranm/contact-us_image
     container_name: contactus_container
     networks:
       static_net:
