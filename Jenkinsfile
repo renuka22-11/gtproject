@@ -29,7 +29,7 @@ pipeline {
         }
         stage ('Docker contactus_image build'){
             steps{
-                sh '/usr/bin/docker image build -t smaranm/contactus_image ./contact-us'
+                sh '/usr/bin/docker image build -t smaranm/contact-us_image ./contact-us'
             }
         }
         stage ('Docker login'){
@@ -39,7 +39,7 @@ pipeline {
         }
         stage ('Docker main_image push'){
             steps{
-                sh '/usr/bin/docker image push smaranm/flask-image'
+                sh '/usr/bin/docker image push smaranm/main_image'
             }
         }
         stage ('Docker courses_image push'){
@@ -59,7 +59,7 @@ pipeline {
         }
         stage ('Docker contactus_image push'){
             steps{
-                sh '/usr/bin/docker image push smaranm/contactus_image'
+                sh '/usr/bin/docker image push smaranm/contact-us_image'
             }
         }
         stage ('create containers'){
