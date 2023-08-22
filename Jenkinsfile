@@ -14,22 +14,22 @@ pipeline {
         }
         stage ('Docker courses_image build'){
             steps{
-                sh 'usr/bin/docker image build -t smaranm/courses_image ./courses'
+                sh '/usr/bin/docker image build -t smaranm/courses_image ./courses'
             }
         }
         stage ('Docker gallery_image build'){
             steps{
-                sh 'usr/bin/docker image build -t smaranm/gallery_image ./gallery'
+                sh '/usr/bin/docker image build -t smaranm/gallery_image ./gallery'
             }
         }
         stage ('Docker staff_image build'){
             steps{
-                sh 'usr/bin/docker image build -t smaranm/staff_image ./staff'
+                sh '/usr/bin/docker image build -t smaranm/staff_image ./staff'
             }
         }
         stage ('Docker contactus_image build'){
             steps{
-                sh 'usr/bin/docker image build -t smaranm/contactus_image ./contact-us'
+                sh '/usr/bin/docker image build -t smaranm/contactus_image ./contact-us'
             }
         }
         stage ('Docker login'){
